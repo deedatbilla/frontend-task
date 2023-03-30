@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <div className={styles.navbar}>
       <div>
-        <Image src="/logo1.svg" alt="" width={40} height={40} />
+        <Image src="/vercel.svg" alt="" width={80} height={40} />
       </div>
       <div
         style={{

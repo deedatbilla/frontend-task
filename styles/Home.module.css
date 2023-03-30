@@ -1,10 +1,7 @@
 .main {
- 
 }
 
 /* Enable hover only on non-touch devices */
-
-
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -21,14 +18,16 @@
     max-width: 320px;
     text-align: center;
   }
-
- 
+}
+.destinationsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
 }
 
-
-
 /* Tablet and Smaller Desktop */
-@media  (min-width: 1120px) {
+@media (min-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
   }
@@ -39,21 +38,25 @@
     justify-content: space-between;
     align-items: center;
     position: sticky;
-   
   }
-  .heroDesktop{
+  .heroDesktop {
     display: flex;
     flex-direction: column;
-    background-image: url(/hero1.png);
-    height: 45vh;
+    background-image: url(/hero2.png);
+    height: 1200px;
     width: 100%;
+    
+  }
+  .topDestinations {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    border-top-left-radius: 170px;
+    border-top-right-radius: 170px;
+    padding: 20px;
   }
 }
-
-
-
-
-
 
 .button {
   background-color: #047ffe;
