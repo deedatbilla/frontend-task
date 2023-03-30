@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "@/styles/Home.module.css";
 import DestinationCard from "./DestinationCard";
-function TopDestinations() {
-  const data = [
+export  const data = [
     {
       image: "/place2.png",
       city: "Accra",
@@ -36,6 +35,8 @@ function TopDestinations() {
       city: "Budapest",
     },
   ];
+function TopDestinations() {
+
   return (
     <div className={styles.topDestinations}>
       <div

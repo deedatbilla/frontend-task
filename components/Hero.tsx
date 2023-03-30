@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import TopDestinations from "./TopDestinations";
 function Hero() {
   return (
-  
+    <div style={{ position: "relative" }}>
       <div className={styles.heroDesktop}>
         <div
           style={{
@@ -52,7 +52,8 @@ function Hero() {
           </div>
         </div>
       </div>
-     
+      <TopDestinations/>
+    </div>
   );
 }
 

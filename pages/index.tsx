@@ -5,8 +5,7 @@ import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import TopDestinations from "@/components/TopDestinations";
-
-const inter = Inter({ subsets: ["latin"] });
+import PopularPlaces from "@/components/PopularPlaces";
 
 export default function Home() {
   return (
@@ -19,11 +18,8 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className={styles.main}>
-        <div style={{ position: "relative" }}>
-          <Hero />
-          <TopDestinations />
-        </div>
-       
+        <Hero />
+        <PopularPlaces />
       </main>
     </>
   );
