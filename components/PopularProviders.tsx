@@ -34,9 +34,14 @@ function PopularProviders() {
         }}
       >
         {providers.slice(0, 5).map((item) => (
-          <div>
+          <div style={{ height: "60px", width: "60px" }}>
             <img
-              style={{ height: "60px", width: "60px", borderRadius: "600px",backgroundSize:"contain" }}
+              style={{
+                borderRadius: "600px",
+                backgroundSize: "contain",
+                height: "100%",
+                width: "100%",
+              }}
               src={item.image}
             />
           </div>

@@ -1,3 +1,4 @@
+import BottomTab from "@/components/BottomTab";
 import React from "react";
 import { ArrowRight, Calendar, Document, Location, Star } from "react-iconly";
 import Slider from "react-slick";
@@ -56,12 +57,14 @@ function Detail() {
         }}
       >
         <div>
-          <p style={{ fontSize: "28px", fontWeight: "bold" }}>
+          <p
+            style={{ fontSize: "26px", fontWeight: "bold", lineHeight: "26px" }}
+          >
             The best of Pattaya & Bangkok
           </p>
         </div>
         <div>
-          <p style={{ fontSize: "24px", fontWeight: "bold", color: "#e11900" }}>
+          <p style={{ fontSize: "22px", fontWeight: "bold", color: "#e11900" }}>
             $12,356
           </p>
           <p style={{ fontSize: "14px", fontWeight: "bold" }}>
@@ -85,8 +88,10 @@ function Detail() {
             alignItems: "center",
           }}
         >
-          <Location primaryColor="#e11900" />
-          <p>Thailand basin</p>
+          <Location size={18} primaryColor="#e11900" />
+          <p style={{ fontSize: "14px", opacity: 0.7, marginLeft: "5px" }}>
+            Thailand basin
+          </p>
         </div>
         <div
           style={{
@@ -104,85 +109,119 @@ function Detail() {
           </p>
         </div>
       </div>
+      <hr style={{ marginTop: "20px" }} />
 
-      <div style={{ marginTop: "25px", paddingInline: "10px" }}>
+      <div style={{ marginTop: "20px", paddingInline: "10px" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <div>
             <img height={40} width={40} src="/person1.png" />
           </div>
           <div style={{ marginLeft: "20px" }}>
             <p style={{ fontWeight: "bold" }}>Deedat Idriss</p>
-            <p>31st March 2023</p>
+            <p style={{ opacity: 0.7, marginLeft: "5px", fontSize: "14px" }}>
+              31st March 2023
+            </p>
           </div>
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          paddingInline: "10px",
-          marginTop: "20px",
-        }}
-      >
+      <div className="trip-details">
         <div
           style={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            paddingInline: "10px",
+            borderBottom: "1px solid #f4f4f4",
+            paddingBottom: "8px",
+            // marginTop: "20px",
           }}
         >
-          <Location />
-          <div>
-            <div style={{ marginLeft: "20px" }}>
-              <p style={{ fontWeight: "bold" }}>Start At</p>
-              <p>London</p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Location />
+            <div>
+              <div style={{ marginLeft: "20px" }}>
+                <p style={{ fontWeight: "bold" }}>Start At</p>
+                <p
+                  style={{ opacity: 0.7, fontSize: "14px" }}
+                >
+                  London
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <ArrowRight />
+          <div>
+            <ArrowRight />
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            {/* <Location /> */}
+            <div>
+              <div style={{ marginLeft: "20px" }}>
+                <p style={{ fontWeight: "bold" }}>End At</p>
+                <p
+                  style={{ opacity: 0.7, fontSize: "14px" }}
+                >
+                  New York
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
+            marginTop: "25px",
+            paddingInline: "10px",
+            borderBottom: "1px solid #f4f4f4",
+            paddingBottom: "8px",
           }}
         >
-          {/* <Location /> */}
-          <div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div>
+              <Calendar />
+            </div>
             <div style={{ marginLeft: "20px" }}>
-              <p style={{ fontWeight: "bold" }}>End At</p>
-              <p>New York</p>
+              <p style={{ fontWeight: "bold" }}>Duration</p>
+              <p
+                style={{
+                  opacity: 0.7,
+                 
+                  fontSize: "14px",
+                 
+                }}
+              >
+                5 weeks
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "25px", paddingInline: "10px" }}>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div>
+              <Document />
+            </div>
+            <div style={{ marginLeft: "20px" }}>
+              <p style={{ fontWeight: "bold" }}>Physical Rating</p>
+              <p style={{ opacity: 0.7,  fontSize: "14px" }}>
+                5 days
+              </p>
             </div>
           </div>
         </div>
       </div>
-
-      <div style={{ marginTop: "25px", paddingInline: "10px" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div>
-            <Calendar />
-          </div>
-          <div style={{ marginLeft: "20px" }}>
-            <p style={{ fontWeight: "bold" }}>Duration</p>
-            <p>5 weeks</p>
-          </div>
-        </div>
-      </div>
-      <div style={{ marginTop: "25px", paddingInline: "10px" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div>
-            <Document />
-          </div>
-          <div style={{ marginLeft: "20px" }}>
-            <p style={{ fontWeight: "bold" }}>Physical Rating</p>
-            <p>5 days</p>
-          </div>
-        </div>
-      </div>
+      <BottomTab />
     </div>
   );
 }

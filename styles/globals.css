@@ -9,6 +9,7 @@ body {
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 body {
   overflow-y: scroll;
@@ -31,12 +32,24 @@ body {
   margin: 0 auto;
   margin-top: 50px;
 }
+.trip-details{
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 20px ;
+  height: 100%;
+  margin-inline: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 23px;
+  margin-bottom: 123px;
+}
 .popular-places-container-mobile {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .popular-places {
   display: grid;
@@ -54,15 +67,15 @@ body {
   align-items: center;
   justify-content: space-between;
   /* padding-inline: 5px; */
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .top-destinations-mobile {
   position: absolute;
   width: 100%;
   top: 0;
   background-color: white;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   padding: 20px;
   margin-top: 240px;
 }

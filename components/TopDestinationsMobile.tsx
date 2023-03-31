@@ -18,7 +18,7 @@ function TopDestinationsMobile() {
       <div
         style={{
           margin: "0 auto",
-          marginTop: "20px",
+          marginTop: "6px",
           paddingInline: "8px",
           width: "100%",
         }}
