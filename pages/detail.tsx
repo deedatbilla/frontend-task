@@ -61,7 +61,7 @@ function Detail() {
           </p>
         </div>
         <div>
-          <p style={{ fontSize: "24px", fontWeight: "bold", color: "red" }}>
+          <p style={{ fontSize: "24px", fontWeight: "bold", color: "#e11900" }}>
             $12,356
           </p>
           <p style={{ fontSize: "14px", fontWeight: "bold" }}>
@@ -85,7 +85,7 @@ function Detail() {
             alignItems: "center",
           }}
         >
-          <Location primaryColor="red" />
+          <Location primaryColor="#e11900" />
           <p>Thailand basin</p>
         </div>
         <div

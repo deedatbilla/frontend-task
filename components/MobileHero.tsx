@@ -69,7 +69,7 @@ function MobileHero() {
               placeholder="Where are you going"
             />
 
-            <button style={{}} className={styles.button}>
+            <button style={{}} className={styles.search}>
               <Search />
             </button>
           </div>

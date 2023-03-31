@@ -16,7 +16,7 @@ function CircleStoryCard({ data }: { data: any }) {
             borderRadius: "300px",
             width: "60px",
             height: "60px",
-            border: "1px solid red",
+            border: "1px solid #e11900",
           }}
           src={data.image}
         />

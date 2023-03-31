@@ -5,7 +5,7 @@ function BottomTab() {
   const navItems = [
     {
       title: "Home",
-      icon: <Home primaryColor="red" />,
+      icon: <Home primaryColor="#e11900" />,
     },
     {
       title: "Search",
@@ -23,8 +23,9 @@ function BottomTab() {
   return (
     <div className="bottom-tab-container">
       <div className="bottom-tab-items">
-        {navItems.map((item) => (
+        {navItems.map((item, idx) => (
           <button
+            key={idx}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -33,7 +34,7 @@ function BottomTab() {
             }}
           >
             {item.icon}
-            <p>{item.title}</p>
+            <p style={{ color: idx === 0 ? "#e11900" : "black" }}>{item.title}</p>
           </button>
         ))}
       </div>
