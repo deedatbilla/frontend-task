@@ -69,7 +69,7 @@ function Detail() {
           </p>
           <p style={{ fontSize: "14px", fontWeight: "bold" }}>
             Per Person{" "}
-            <span style={{ textDecoration: "line-through" }}>$12,356</span>
+            <span style={{ textDecoration: "line-through" }}>$15,356</span>
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ function Detail() {
         >
           <Location size={18} primaryColor="#e11900" />
           <p style={{ fontSize: "14px", opacity: 0.7, marginLeft: "5px" }}>
-            Thailand basin
+            Thailand 
           </p>
         </div>
         <div

@@ -15,7 +15,7 @@ function PopularProviders() {
       image: "/p4.webp",
     },
     {
-      image: "/p1.jpg",
+      image: "/person1.png",
     },
     {
       image: "/p2.jpg",
