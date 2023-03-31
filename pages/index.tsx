@@ -29,7 +29,7 @@ export default function Home() {
 
       <div className="mobile">
         <MobileHero />
-        <PopularProviders/>
+       
         <BottomTab/>
       </div>
     </>

@@ -74,6 +74,7 @@ function MobileHero() {
           </div>
         </div>
         <TopDestinationsMobile/>
+        
       </div>
      
     </div>
