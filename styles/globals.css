@@ -61,8 +61,8 @@ body {
   width: 100%;
   top: 0;
   background-color: white;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   padding: 20px;
   margin-top: 240px;
 }
