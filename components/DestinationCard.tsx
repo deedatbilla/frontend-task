@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function DestinationCard({ data }: { data: any }) {
   return (
-    <div className="destinationCard">
+   <Link href="/detail">
+     <div className="destinationCard">
       <img
         style={{
           height: "120px",
@@ -21,6 +23,7 @@ function DestinationCard({ data }: { data: any }) {
         </p>
       </div>
     </div>
+   </Link>
   );
 }
 
