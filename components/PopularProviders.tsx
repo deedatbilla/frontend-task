@@ -22,20 +22,23 @@ function PopularProviders() {
     },
   ];
   return (
-    <div style={{ marginTop: "20px", marginBottom: "50px" }}>
-      <h1 style={{ textAlign: "left", fontSize: "20px" }}>Popular providers</h1>
+    <div style={{ marginTop: "20px", marginBottom: "30px" }}>
+      <h1 style={{ textAlign: "left", fontSize: "20px" }}>Popular Providers</h1>
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          marginTop:"12px",
-          overflowX:"scroll"
+          marginTop: "12px",
+          overflowX: "scroll",
         }}
       >
-        {providers.map((item) => (
+        {providers.slice(0, 5).map((item) => (
           <div>
-            <img style={{ height: "50px", width: "50px",borderRadius:"6px" }} src={item.image} />
+            <img
+              style={{ height: "60px", width: "60px", borderRadius: "600px",backgroundSize:"contain" }}
+              src={item.image}
+            />
           </div>
         ))}
       </div>

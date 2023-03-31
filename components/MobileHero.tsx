@@ -17,7 +17,7 @@ function MobileHero() {
             left: 0,
             marginTop: "100px",
             width: "100%",
-            paddingInline:"15px"
+            paddingInline:"25px"
           }}
         >
           <div
@@ -64,6 +64,7 @@ function MobileHero() {
                 // padding: "12px",
                 color: "black",
                 border: "0px",
+                paddingInline:"10px"
               }}
               placeholder="Where are you going"
             />

@@ -17,10 +17,10 @@ function TopDestinationsMobile() {
     <div className="top-destinations-mobile">
       <div
         style={{
-          maxWidth: "1100px",
           margin: "0 auto",
           marginTop: "20px",
-          paddingInline:"15px"
+          paddingInline: "8px",
+          width: "100%",
         }}
       >
         <h1 style={{ textAlign: "left", fontSize: "20px" }}>
@@ -48,14 +48,47 @@ function TopDestinationsMobile() {
         <PopularProviders />
 
         <div>
-          <h1 style={{ textAlign: "left", fontSize: "20px",marginBottom:"20px" }}>
-            Departing soon
+          <h1
+            style={{
+              textAlign: "left",
+              fontSize: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            Departing Soon
           </h1>
           <div style={{ marginBottom: "70px" }}>
             <Slider {...settings}>
-              <img style={{ width: "100%" }} src="/blog-img1.png" />
-              <img style={{ width: "100%" }} src="/blog-img2.png" />
-              <img style={{ width: "100%" }} src="/blog-img3.png" />
+              <div>
+                <img
+                  style={{
+                    width: "100%",
+                    height: "170px",
+                    borderRadius: "15px",
+                  }}
+                  src="/blog-img1.png"
+                />
+              </div>
+              <div>
+                <img
+                  style={{
+                    width: "100%",
+                    height: "170px",
+                    borderRadius: "15px",
+                  }}
+                  src="/blog-img2.png"
+                />
+              </div>
+              <div>
+                <img
+                  style={{
+                    width: "100%",
+                    height: "170px",
+                    borderRadius: "15px",
+                  }}
+                  src="/blog-img3.png"
+                />
+              </div>
             </Slider>
           </div>
         </div>
