@@ -20,7 +20,7 @@ function Detail() {
           />
           <img
             style={{ width: "100%", height: "45vh", backgroundSize: "cover" }}
-            src="/hero2.png"
+            src="/hero1.png"
           />
           <img
             style={{ width: "100%", height: "45vh", backgroundSize: "cover" }}

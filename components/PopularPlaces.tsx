@@ -4,11 +4,11 @@ import DestinationCard from "./DestinationCard";
 import { data } from "./TopDestinations";
 export  const places = [
     {
-      image: "/place2.png",
+      image: "/blog-img3.png",
       city: "Accra",
     },
     {
-      image: "/place3.png",
+      image: "/blog-img1.png",
       city: "New York",
     },
     {
@@ -16,7 +16,7 @@ export  const places = [
       city: "Delhi",
     },
     {
-      image: "/place3.png",
+      image: "/blog-img2.png",
       city: "Budapest",
     },
     {

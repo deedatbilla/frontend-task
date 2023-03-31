@@ -11,7 +11,7 @@ function CircleStoryCard({ data }: { data: any }) {
         width: "100%",
       }}
     >
-      <div>
+      <div style={{width:"100%"}}>
         <img
           style={{
             borderRadius: "300px",
@@ -22,9 +22,10 @@ function CircleStoryCard({ data }: { data: any }) {
           src={data.image}
         />
       </div>
-      <p
+     <div>
+     <p
         style={{
-          textAlign: "center",
+          // textAlign: "center",
           width: "100%",
           lineBreak: "unset",
           whiteSpace: "nowrap",
@@ -32,6 +33,7 @@ function CircleStoryCard({ data }: { data: any }) {
       >
         {data.city}
       </p>
+     </div>
     </div>
   );
 }
