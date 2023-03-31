@@ -38,7 +38,7 @@ function MobileHero() {
               Search Locations
             </h1>
             <Menu>
-              <MenuButton bg={"#00000000"} as={Button} rightIcon={<ChevronDown />}>
+              <MenuButton backgroundColor="transparent" as={Button} rightIcon={<ChevronDown />}>
                 Accra
               </MenuButton>
               <MenuList>
