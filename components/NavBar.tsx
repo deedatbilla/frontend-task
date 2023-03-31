@@ -7,8 +7,21 @@ import { ChevronDown } from "react-iconly";
 function NavBar() {
   return (
     <div className={styles.navbar}>
-      <div>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <Image src="/vercel.svg" alt="" width={80} height={40} />
+        <p
+          style={{
+            fontSize: "18px",
+            marginLeft: "10px",
+            color: "blue",
+            textDecoration: "underline",
+          }}
+        >
+          Home
+        </p>
+        <p style={{ fontSize: "18px", marginLeft: "10px" }}>Search</p>
+        <p style={{ fontSize: "18px", marginLeft: "10px" }}>My bookings</p>
+        <p style={{ fontSize: "18px", marginLeft: "10px" }}>Profile</p>
       </div>
       <div
         style={{
@@ -17,14 +30,16 @@ function NavBar() {
         }}
       >
         <Menu>
-          <MenuButton  bg={"white"}  as={Button} rightIcon={<ChevronDown />}>
+          <MenuButton bg={"white"} as={Button} rightIcon={<ChevronDown />}>
             Accra
           </MenuButton>
           <MenuList>
             <MenuItem>Delhi</MenuItem>
           </MenuList>
         </Menu>
-        <button style={{marginLeft:"10px"}} className={styles.button}>Login</button>
+        <button style={{ marginLeft: "10px" }} className={styles.button}>
+          Login
+        </button>
       </div>
     </div>
   );
