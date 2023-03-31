@@ -17,8 +17,7 @@ function MobileHero() {
             left: 0,
             marginTop: "100px",
             width: "100%",
-            paddingLeft: "10px",
-            paddingRight: "10px",
+            paddingInline:"15px"
           }}
         >
           <div
@@ -33,16 +32,17 @@ function MobileHero() {
                 textAlign: "left",
                 fontWeight: "bold",
                 fontSize: "20px",
+                marginLeft:"3px"
               }}
             >
               Search Locations
             </h1>
             <Menu>
               <MenuButton backgroundColor="transparent" as={Button} rightIcon={<ChevronDown />}>
-                Accra
+                London
               </MenuButton>
               <MenuList>
-                <MenuItem>Delhi</MenuItem>
+                <MenuItem><p style={{color:"black"}}>Delhi</p></MenuItem>
               </MenuList>
             </Menu>
           </div>

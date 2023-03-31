@@ -14,18 +14,36 @@ function Detail() {
     <div style={{ width: "100%", maxWidth: "500px", margin: "0 auto" }}>
       <div style={{ width: "100%" }}>
         <Slider {...settings}>
-          <img
-            style={{ width: "100%", height: "45vh", backgroundSize: "cover" }}
-            src="/hero2.png"
-          />
-          <img
-            style={{ width: "100%", height: "45vh", backgroundSize: "cover" }}
-            src="/hero1.png"
-          />
-          <img
-            style={{ width: "100%", height: "45vh", backgroundSize: "cover" }}
-            src="/hero2.png"
-          />
+          <div>
+            <img
+              style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
+              src="/hero2.png"
+            />
+          </div>
+          <div>
+            <img
+              style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
+              src="/place5.jpg"
+            />
+          </div>
+          <div>
+            <img
+              style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
+              src="/place6.jpg"
+            />
+          </div>
+          <div>
+            <img
+              style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
+              src="/place7.jpg"
+            />
+          </div>
+          <div>
+            <img
+              style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
+              src="/hero2.png"
+            />
+          </div>
         </Slider>
       </div>
       <div
@@ -118,7 +136,7 @@ function Detail() {
           <div>
             <div style={{ marginLeft: "20px" }}>
               <p style={{ fontWeight: "bold" }}>Start At</p>
-              <p>Accra</p>
+              <p>London</p>
             </div>
           </div>
         </div>

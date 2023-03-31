@@ -5,26 +5,42 @@ import { data } from "./TopDestinations";
 export  const places = [
     {
       image: "/blog-img3.png",
-      city: "Accra",
+      city: "London",
     },
     {
       image: "/blog-img1.png",
       city: "New York",
     },
     {
-      image: "/place2.png",
+      image: "/place4.jpg",
       city: "Delhi",
     },
     {
-      image: "/blog-img2.png",
+      image: "/place5.jpg",
       city: "Budapest",
     },
     {
-      image: "/place2.png",
-      city: "Accra",
+      image: "/place6.jpg",
+      city: "Tokyo",
+    },
+    {
+      image: "/place7.jpg",
+      city: "New York",
+    },
+    {
+      image: "/place8.webp",
+      city: "Delhi",
     },
     {
       image: "/place3.png",
+      city: "Califonia",
+    },
+    {
+      image: "/place4.jpg",
+      city: "Mexico",
+    },
+    {
+      image: "/place5.jpg",
       city: "New York",
     },
     {
@@ -33,27 +49,11 @@ export  const places = [
     },
     {
       image: "/place3.png",
-      city: "Budapest",
+      city: "Berlin",
     },
     {
       image: "/place2.png",
-      city: "Accra",
-    },
-    {
-      image: "/place3.png",
-      city: "New York",
-    },
-    {
-      image: "/place2.png",
-      city: "Delhi",
-    },
-    {
-      image: "/place3.png",
-      city: "Budapest",
-    },
-    {
-      image: "/place2.png",
-      city: "Accra",
+      city: "Dubai",
     },
   ];
 function PopularPlaces() {

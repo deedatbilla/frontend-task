@@ -20,6 +20,7 @@ function TopDestinationsMobile() {
           maxWidth: "1100px",
           margin: "0 auto",
           marginTop: "20px",
+          paddingInline:"15px"
         }}
       >
         <h1 style={{ textAlign: "left", fontSize: "20px" }}>

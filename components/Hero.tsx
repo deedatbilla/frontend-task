@@ -3,8 +3,8 @@ import styles from "@/styles/Home.module.css";
 import TopDestinations from "./TopDestinations";
 function Hero() {
   return (
-    <div style={{ position: "relative" }}>
-      <div className={styles.heroDesktop}>
+    <div>
+      <div  style={{ position: "relative" }} className={styles.heroDesktop}>
         <div
           style={{
             position: "absolute",
@@ -51,8 +51,9 @@ function Hero() {
             </button>
           </div>
         </div>
+        <TopDestinations/>
       </div>
-      <TopDestinations/>
+      
     </div>
   );
 }

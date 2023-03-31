@@ -4,30 +4,30 @@ import DestinationCard from "./DestinationCard";
 export  const data = [
     {
       image: "/place2.png",
-      city: "Accra",
+      city: "London",
     },
     {
       image: "/place3.png",
       city: "New York",
     },
     {
-      image: "/place2.png",
+      image: "/place4.jpg",
       city: "Delhi",
     },
     {
-      image: "/place3.png",
+      image: "/place5.jpg",
       city: "Budapest",
     },
     {
-      image: "/place2.png",
-      city: "Accra",
+      image: "/place6.jpg",
+      city: "Califonia",
     },
     {
-      image: "/place3.png",
-      city: "New York",
+      image: "/place7.jpg",
+      city: "Tokyo",
     },
     {
-      image: "/place2.png",
+      image: "/place8.webp",
       city: "Delhi",
     },
     {

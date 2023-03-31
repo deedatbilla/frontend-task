@@ -7,9 +7,12 @@
 html,
 body {
   height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 body {
   overflow-y: scroll;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .heroMobile {
   display: flex;

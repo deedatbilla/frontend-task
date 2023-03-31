@@ -8,20 +8,18 @@ function NavBar() {
   return (
     <div className={styles.navbar}>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Image src="/vercel.svg" alt="" width={80} height={40} />
+        <Image src="/vercel.svg" alt="" width={100} height={100} />
         <p
           style={{
             fontSize: "18px",
-            marginLeft: "10px",
-            color: "blue",
-            textDecoration: "underline",
+            marginLeft: "25px",
           }}
         >
           Home
         </p>
-        <p style={{ fontSize: "18px", marginLeft: "10px" }}>Search</p>
-        <p style={{ fontSize: "18px", marginLeft: "10px" }}>My bookings</p>
-        <p style={{ fontSize: "18px", marginLeft: "10px" }}>Profile</p>
+        <p style={{ fontSize: "18px", marginLeft: "15px" }}>Search</p>
+        <p style={{ fontSize: "18px", marginLeft: "15px" }}>My bookings</p>
+        <p style={{ fontSize: "18px", marginLeft: "15px" }}>Profile</p>
       </div>
       <div
         style={{
@@ -31,7 +29,7 @@ function NavBar() {
       >
         <Menu>
           <MenuButton bg={"white"} as={Button} rightIcon={<ChevronDown />}>
-            Accra
+            London
           </MenuButton>
           <MenuList>
             <MenuItem>Delhi</MenuItem>
