@@ -54,17 +54,25 @@ function Detail() {
           justifyContent: "space-between",
           paddingInline: "10px",
           marginTop: "30px",
-          gap:"10px"
+          gap: "10px",
         }}
       >
-        <div>
+        <div style={{ width: "100%" }}>
           <p
             style={{ fontSize: "20px", fontWeight: "bold", lineHeight: "26px" }}
           >
             The Best of Pattaya & Bangkok
           </p>
         </div>
-        <div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "end",
+            alignItems: "end",
+          }}
+        >
           <p style={{ fontSize: "18px", fontWeight: "bold", color: "#e11900" }}>
             $12,356
           </p>
@@ -81,7 +89,6 @@ function Detail() {
           justifyContent: "space-between",
           paddingInline: "10px",
           marginTop: "20px",
-         
         }}
       >
         <div
@@ -92,7 +99,7 @@ function Detail() {
         >
           <Location size={18} primaryColor="#e11900" />
           <p style={{ fontSize: "14px", opacity: 0.7, marginLeft: "5px" }}>
-            Thailand 
+            Thailand
           </p>
         </div>
         <div
@@ -149,11 +156,7 @@ function Detail() {
             <div>
               <div style={{ marginLeft: "20px" }}>
                 <p style={{ fontWeight: "bold" }}>Start At</p>
-                <p
-                  style={{ opacity: 0.7, fontSize: "14px" }}
-                >
-                  London
-                </p>
+                <p style={{ opacity: 0.7, fontSize: "14px" }}>London</p>
               </div>
             </div>
           </div>
@@ -172,11 +175,7 @@ function Detail() {
             <div>
               <div style={{ marginLeft: "20px" }}>
                 <p style={{ fontWeight: "bold" }}>End At</p>
-                <p
-                  style={{ opacity: 0.7, fontSize: "14px" }}
-                >
-                  New York
-                </p>
+                <p style={{ opacity: 0.7, fontSize: "14px" }}>New York</p>
               </div>
             </div>
           </div>
@@ -199,9 +198,8 @@ function Detail() {
               <p
                 style={{
                   opacity: 0.7,
-                 
+
                   fontSize: "14px",
-                 
                 }}
               >
                 5 weeks
@@ -216,9 +214,7 @@ function Detail() {
             </div>
             <div style={{ marginLeft: "20px" }}>
               <p style={{ fontWeight: "bold" }}>Physical Rating</p>
-              <p style={{ opacity: 0.7,  fontSize: "14px" }}>
-                5 days
-              </p>
+              <p style={{ opacity: 0.7, fontSize: "14px" }}>5 days</p>
             </div>
           </div>
         </div>
