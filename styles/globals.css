@@ -8,12 +8,31 @@ html,
 body {
   height: 100%;
 }
-
+body{
+  overflow-y: scroll;
+}
+.heroMobile {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/hero2.png);
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  
+}
 .popular-places-container {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.popular-places-container-mobile {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   margin: 0 auto;
   margin-top: 50px;
  
@@ -23,10 +42,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
- 
 }
-.places{
-  
+.popular-places-mobile {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 14px;
+}
+.places {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -34,6 +56,17 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 30px;
+}
+.top-destinations-mobile{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  padding: 20px;
+  margin-top: 240px;
+  
 }
 a {
   color: inherit;
@@ -64,5 +97,23 @@ button:focus {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media (min-width: 1120px) {
+  .desktop {
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .desktop {
+    display: none;
+  }
+  .mobile{
+    display: block;
   }
 }

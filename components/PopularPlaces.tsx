@@ -2,9 +2,7 @@ import React from "react";
 import CircleStoryCard from "./CircleStoryCard";
 import DestinationCard from "./DestinationCard";
 import { data } from "./TopDestinations";
-
-function PopularPlaces() {
-  const places = [
+export  const places = [
     {
       image: "/place2.png",
       city: "Accra",
@@ -58,6 +56,8 @@ function PopularPlaces() {
       city: "Accra",
     },
   ];
+function PopularPlaces() {
+ 
   return (
     <div>
       <h1 style={{ textAlign: "center", marginTop: "100px" }}>

@@ -6,6 +6,7 @@ import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import TopDestinations from "@/components/TopDestinations";
 import PopularPlaces from "@/components/PopularPlaces";
+import MobileHero from "@/components/MobileHero";
 
 export default function Home() {
   return (
@@ -16,11 +17,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
-      <main className={styles.main}>
-        <Hero />
-        <PopularPlaces />
-      </main>
+      <div className="desktop">
+        <NavBar />
+        <main className={styles.main}>
+          <Hero />
+          <PopularPlaces />
+        </main>
+      </div>
+
+      <div className="mobile">
+        <MobileHero />
+      </div>
     </>
   );
 }
