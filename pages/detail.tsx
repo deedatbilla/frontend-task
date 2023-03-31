@@ -1,9 +1,18 @@
 import BottomTab from "@/components/BottomTab";
+import { useRouter } from "next/router";
 import React from "react";
-import { ArrowRight, Calendar, Document, Location, Star } from "react-iconly";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  Document,
+  Location,
+  Star,
+} from "react-iconly";
 import Slider from "react-slick";
 
 function Detail() {
+  const router = useRouter();
   var settings = {
     dots: true,
     infinite: true,
@@ -12,7 +21,27 @@ function Detail() {
     slidesToScroll: 1,
   };
   return (
-    <div style={{ width: "100%", maxWidth: "500px", margin: "0 auto" }}>
+    <div
+      style={{
+        width: "100%",
+        maxWidth: "500px",
+        margin: "0 auto",
+        position: "relative",
+      }}
+    >
+      <button
+        onClick={() => router.back()}
+        style={{
+          top: 6,
+          left: 10,
+
+          width: "100%",
+          position: "absolute",
+          zIndex: 1000,
+        }}
+      >
+        <ArrowLeft primaryColor="white" />
+      </button>
       <div style={{ width: "100%" }}>
         <Slider {...settings}>
           <div>
@@ -37,12 +66,6 @@ function Detail() {
             <img
               style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
               src="/place7.jpg"
-            />
-          </div>
-          <div>
-            <img
-              style={{ width: "100%", height: "35vh", backgroundSize: "cover" }}
-              src="/hero2.png"
             />
           </div>
         </Slider>
