@@ -54,20 +54,21 @@ function Detail() {
           justifyContent: "space-between",
           paddingInline: "10px",
           marginTop: "30px",
+          gap:"10px"
         }}
       >
         <div>
           <p
-            style={{ fontSize: "26px", fontWeight: "bold", lineHeight: "26px" }}
+            style={{ fontSize: "20px", fontWeight: "bold", lineHeight: "26px" }}
           >
-            The best of Pattaya & Bangkok
+            The Best of Pattaya & Bangkok
           </p>
         </div>
         <div>
-          <p style={{ fontSize: "22px", fontWeight: "bold", color: "#e11900" }}>
+          <p style={{ fontSize: "18px", fontWeight: "bold", color: "#e11900" }}>
             $12,356
           </p>
-          <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+          <p style={{ fontSize: "14px", fontWeight: "600" }}>
             Per Person{" "}
             <span style={{ textDecoration: "line-through" }}>$15,356</span>
           </p>
@@ -80,6 +81,7 @@ function Detail() {
           justifyContent: "space-between",
           paddingInline: "10px",
           marginTop: "20px",
+         
         }}
       >
         <div
