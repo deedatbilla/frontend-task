@@ -19,7 +19,7 @@ function TopDestinationsMobile() {
       </h1>
 
       <div className="places">
-        {places.slice(0,4).map((item) => (
+        {places.map((item) => (
           <CircleStoryCard data={item} />
         ))}
       </div>

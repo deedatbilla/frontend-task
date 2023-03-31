@@ -7,6 +7,7 @@ function DestinationCard({ data }: { data: any }) {
       <img
         style={{
           height: "120px",
+          width:"100%",
           borderTopLeftRadius: "20px",
           borderTopRightRadius: "20px",
         }}

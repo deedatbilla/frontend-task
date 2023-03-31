@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import TopDestinations from "@/components/TopDestinations";
 import PopularPlaces from "@/components/PopularPlaces";
 import MobileHero from "@/components/MobileHero";
+import BottomTab from "@/components/BottomTab";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
 
       <div className="mobile">
         <MobileHero />
+        <BottomTab/>
       </div>
     </>
   );

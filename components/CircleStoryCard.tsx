@@ -8,18 +8,30 @@ function CircleStoryCard({ data }: { data: any }) {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        width: "100%",
       }}
     >
-      <img
+      <div>
+        <img
+          style={{
+            borderRadius: "300px",
+            width: "60px",
+            height: "60px",
+            border: "1px solid red",
+          }}
+          src={data.image}
+        />
+      </div>
+      <p
         style={{
-          borderRadius: "300px",
-          width: "60px",
-          height: "60px",
-          border:"1px solid red"
+          textAlign: "center",
+          width: "100%",
+          lineBreak: "unset",
+          whiteSpace: "nowrap",
         }}
-        src={data.image}
-      />
-      <p style={{ textAlign: "center" }}>{data.city}</p>
+      >
+        {data.city}
+      </p>
     </div>
   );
 }
