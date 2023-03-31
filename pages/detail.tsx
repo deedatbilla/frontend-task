@@ -1,5 +1,5 @@
 import React from "react";
-import { Location, Star } from "react-iconly";
+import { ArrowRight, Calendar, Document, Location, Star } from "react-iconly";
 import Slider from "react-slick";
 
 function Detail() {
@@ -11,7 +11,7 @@ function Detail() {
     slidesToScroll: 1,
   };
   return (
-    <div style={{ width: "100%", }}>
+    <div style={{ width: "100%", maxWidth: "500px", margin: "0 auto" }}>
       <div style={{ width: "100%" }}>
         <Slider {...settings}>
           <img
@@ -34,6 +34,7 @@ function Detail() {
           alignItems: "center",
           justifyContent: "space-between",
           paddingInline: "10px",
+          marginTop: "30px",
         }}
       >
         <div>
@@ -64,8 +65,6 @@ function Detail() {
           style={{
             display: "flex",
             alignItems: "center",
-
-          
           }}
         >
           <Location primaryColor="red" />
@@ -85,6 +84,85 @@ function Detail() {
           >
             4.2
           </p>
+        </div>
+      </div>
+
+      <div style={{ marginTop: "25px", paddingInline: "10px" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
+            <img height={40} width={40} src="/person1.png" />
+          </div>
+          <div style={{ marginLeft: "20px" }}>
+            <p style={{ fontWeight: "bold" }}>Deedat Idriss</p>
+            <p>31st March 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          paddingInline: "10px",
+          marginTop: "20px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Location />
+          <div>
+            <div style={{ marginLeft: "20px" }}>
+              <p style={{ fontWeight: "bold" }}>Start At</p>
+              <p>Accra</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <ArrowRight />
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {/* <Location /> */}
+          <div>
+            <div style={{ marginLeft: "20px" }}>
+              <p style={{ fontWeight: "bold" }}>End At</p>
+              <p>New York</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ marginTop: "25px", paddingInline: "10px" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
+            <Calendar />
+          </div>
+          <div style={{ marginLeft: "20px" }}>
+            <p style={{ fontWeight: "bold" }}>Duration</p>
+            <p>5 weeks</p>
+          </div>
+        </div>
+      </div>
+      <div style={{ marginTop: "25px", paddingInline: "10px" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
+            <Document />
+          </div>
+          <div style={{ marginLeft: "20px" }}>
+            <p style={{ fontWeight: "bold" }}>Physical Rating</p>
+            <p>5 days</p>
+          </div>
         </div>
       </div>
     </div>
