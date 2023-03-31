@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function PopularProviders() {
   return (
-    <div>PopularProviders</div>
-  )
+    <div>
+      <h1 style={{ textAlign: "left", fontSize: "20px" }}>Popular places</h1>
+      
+    </div>
+  );
 }
 
-export default PopularProviders
+export default PopularProviders;

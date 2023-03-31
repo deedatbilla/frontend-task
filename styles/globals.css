@@ -53,8 +53,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 30px;
-  overflow-x: scroll;
-  flex-wrap: nowrap;
+ 
 }
 .top-destinations-mobile {
   position: absolute;
@@ -125,5 +124,6 @@ button:focus {
   }
   .mobile {
     display: block;
+    margin-bottom: 160px;
   }
 }

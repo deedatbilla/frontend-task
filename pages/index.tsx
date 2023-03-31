@@ -8,6 +8,7 @@ import TopDestinations from "@/components/TopDestinations";
 import PopularPlaces from "@/components/PopularPlaces";
 import MobileHero from "@/components/MobileHero";
 import BottomTab from "@/components/BottomTab";
+import PopularProviders from "@/components/PopularProviders";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
 
       <div className="mobile">
         <MobileHero />
+        <PopularProviders/>
         <BottomTab/>
       </div>
     </>
