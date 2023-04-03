@@ -73,7 +73,7 @@ function Explore() {
             className="bg-[#F4F4F5] w-full"
           />
           <button>
-            <img src="/svgs/search.svg" />
+            <img className="w-[38px]" src="/svgs/search.svg" />
           </button>
         </div>
         <div className="w-fit">
