@@ -30,7 +30,7 @@ function BottomTab() {
       title: "Notifications",
       iconActive: <Notification set="bold" primaryColor="#ffffff" />,
       iconInactive: <Notification primaryColor="#A5A7AC" />,
-      path: "/notification",
+      path: "/notifications",
     },
     {
       title: "Favorites",
