@@ -2,7 +2,7 @@ import BottomTab from "@/components/BottomTab";
 import HomeLayout from "@/components/HomeLayout";
 import React from "react";
 
-const TypeOfTour = () => {
+export const TypeOfTour = () => {
   const categories = [
     {
       image: "/t1.png",
@@ -74,8 +74,8 @@ function Explore() {
             <img src="/svgs/search.svg" />
           </button>
         </div>
-        <div>
-          <img src="p2.jpg" className=" h-12 w-12 rounded-2xl" />
+        <div className="w-full">
+          <img src="p3.jpg" className=" h-12 w-12 rounded-2xl" />
         </div>
       </div>
 

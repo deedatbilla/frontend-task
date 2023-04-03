@@ -5,6 +5,7 @@ import PopularPlaces from "@/components/PopularPlaces";
 import PopularCategories from "@/components/PopularCategories";
 import BottomTab from "@/components/BottomTab";
 import HomeLayout from "@/components/HomeLayout";
+import { TypeOfTour } from "./explore";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <PopularPlaces />
         <PopularCategories />
+        <TypeOfTour/>
       </HomeLayout>
     </>
   );

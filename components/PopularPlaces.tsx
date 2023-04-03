@@ -38,7 +38,12 @@ function PopularPlaces() {
     <div className="mt-12">
       <div className="flex items-center- justify-between space-x-3">
         {filters.map((item, idx) => (
-          <p className={`${idx === 0 ? "text-[#FF455B]" : ""}`}>{item}</p>
+          <div className="flex justify-center items-center flex-col" key={idx}>
+            <p className={`${idx === 0 ? "text-[#FF455B]" : ""}`}>{item}</p>
+            {idx === 0 && (
+              <div className="h-[5px] rounded-full bg-[#FF455B] w-[5px] " />
+            )}
+          </div>
         ))}
       </div>
 
