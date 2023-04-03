@@ -81,6 +81,32 @@ function Detail() {
             </p>
           </div>
 
+          <div className="mt-12">
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="flex space-x-2 items-center">
+                  <img src="/svgs/clock.svg" alt="" />
+                  <p>5 Days</p>
+                </div>
+                <p className="ml-5">Duration</p>
+              </div>
+              <div>
+                <div className="flex space-x-2 items-center">
+                  <img src="/svgs/Location.svg" alt="" />
+                  <p>625 KM</p>
+                </div>
+                <p className="ml-5">Distance</p>
+              </div>
+              <div>
+                <div className="flex space-x-2 items-center">
+                <img src="/svgs/sun.svg" alt="" />
+                  <p>21 C</p>
+                </div>
+                <p className="ml-5">Sunny</p>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-12 flex items-center justify-between space-x-3">
             <button className="w-full py-4 rounded-full border border-[#FF455B] ">
               <p className="font-bold">$1200</p>

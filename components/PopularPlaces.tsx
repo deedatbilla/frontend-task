@@ -16,12 +16,12 @@ export const places = [
   },
   {
     image: "/svgs/l1.svg",
-    city: "Tajmahal, India",
+    city: "Berlin",
     price: "$2000",
   },
   {
     image: "/svgs/l2.svg",
-    city: "New York",
+    city: "London",
     price: "$2402",
   },
 ];
