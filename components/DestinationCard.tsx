@@ -10,7 +10,7 @@ function DestinationCard({ data }: { data: any }) {
         <img
           src={data.image}
           alt="Your image"
-          className="w-full h-auto rounded-3xl   object-contain"
+          className="w-full h-auto rounded-3xl    object-contain"
         />
         <div className="absolute bottom-0 w-full h-fit  flex items-center justify-between ">
           <div className="px-2 py-4">

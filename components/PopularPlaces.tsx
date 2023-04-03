@@ -5,6 +5,16 @@ import DestinationCard from "./DestinationCard";
 import { data } from "./TopDestinations";
 export const places = [
   {
+    image: "/svgs/l7.svg",
+    city: "Berlin",
+    price: "$2000",
+  },
+  // {
+  //   image: "/svgs/l8.svg",
+  //   city: "London",
+  //   price: "$2402",
+  // },
+  {
     image: "/svgs/l1.svg",
     city: "Tajmahal, India",
     price: "$2000",
@@ -14,16 +24,7 @@ export const places = [
     city: "New York",
     price: "$2402",
   },
-  {
-    image: "/svgs/l1.svg",
-    city: "Berlin",
-    price: "$2000",
-  },
-  {
-    image: "/svgs/l2.svg",
-    city: "London",
-    price: "$2402",
-  },
+  
 ];
 const filters = ["All", "America", "Europe", "Asia", "Ocenia"];
 function PopularPlaces() {
