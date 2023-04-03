@@ -6,7 +6,7 @@ function Hero() {
       <h1 className="text-[28px] font-bold">Discover</h1>
       <p>Explore the best places in world!</p>
 
-      <div className="mt-6 flex items-center bg-[#F4F4F5] py-2 px-4 rounded-full">
+      <div className="mt-6 flex items-center bg-[#F4F4F5] py-4 px-5 rounded-full">
         <input placeholder="Search your trip" className="bg-[#F4F4F5] w-full" />
         <button>
           <img src="/svgs/search.svg" />

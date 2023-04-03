@@ -11,8 +11,8 @@ export const places = [
   },
   {
     image: "/svgs/l2.svg",
-    city: "Tajmahal, India",
-    price: "$2000",
+    city: "New York",
+    price: "$2402",
   },
   // {
   //   image: "/svgs/l3.svg",

@@ -36,7 +36,7 @@ function BottomTab() {
       <div className="flex items-center justify-between my-3">
         {navItems.map((item, idx) => (
           <button
-            className={`flex items-center px-6 py-4 rounded-2xl ${
+            className={`flex items-center px-6 py-3.5 rounded-2xl ${
               pathname === item.path ? "space-x-2 " : ""
             }`}
             style={{
