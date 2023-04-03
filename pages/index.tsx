@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import PopularPlaces from "@/components/PopularPlaces";
 import PopularCategories from "@/components/PopularCategories";
 import BottomTab from "@/components/BottomTab";
+import HomeLayout from "@/components/HomeLayout";
 
 export default function Home() {
   return (
@@ -15,13 +16,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="mx-auto max-w-md px-5">
+      <HomeLayout>
         <NavBar />
         <Hero />
         <PopularPlaces />
         <PopularCategories />
-        <BottomTab />
-      </div>
+      </HomeLayout>
     </>
   );
 }

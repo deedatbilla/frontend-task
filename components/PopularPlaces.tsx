@@ -14,11 +14,16 @@ export const places = [
     city: "New York",
     price: "$2402",
   },
-  // {
-  //   image: "/svgs/l3.svg",
-  //   city: "Tajmahal, India",
-  //   price: "$2000",
-  // },
+  {
+    image: "/svgs/l1.svg",
+    city: "Tajmahal, India",
+    price: "$2000",
+  },
+  {
+    image: "/svgs/l2.svg",
+    city: "New York",
+    price: "$2402",
+  },
 ];
 const filters = ["All", "America", "Europe", "Asia", "Ocenia"];
 function PopularPlaces() {

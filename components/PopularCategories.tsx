@@ -20,7 +20,7 @@ function PopularCategories() {
     },
   ];
   return (
-    <div className="my-12 mb-32">
+    <div className="my-12 ">
       <h1 className="text-[28px] font-bold">Popular Categories</h1>
       <div className="flex justify-between items-center gap-4 mt-3">
         {categories.map((item) => (

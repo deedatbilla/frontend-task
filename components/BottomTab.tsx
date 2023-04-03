@@ -1,6 +1,14 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { Calendar, Discovery, Heart, Home, Notification, Search, User } from "react-iconly";
+import {
+  Calendar,
+  Discovery,
+  Heart,
+  Home,
+  Notification,
+  Search,
+  User,
+} from "react-iconly";
 
 function BottomTab() {
   const router = useRouter();
@@ -8,27 +16,27 @@ function BottomTab() {
   const navItems = [
     {
       title: "Home",
-      iconActive: <Home primaryColor="#ffffff" />,
+      iconActive: <Home set="bold" primaryColor="#ffffff" />,
       iconInactive: <Home primaryColor="#A5A7AC" />,
       path: "/",
     },
     {
       title: "Explore",
-      iconActive: <Discovery primaryColor="#ffffff" />,
+      iconActive: <Discovery set="bold" primaryColor="#ffffff" />,
       iconInactive: <Discovery primaryColor="#A5A7AC" />,
       path: "/explore",
     },
     {
       title: "Notifications",
-      iconActive: <Notification primaryColor="#ffffff" />,
+      iconActive: <Notification set="bold" primaryColor="#ffffff" />,
       iconInactive: <Notification primaryColor="#A5A7AC" />,
       path: "/notification",
     },
     {
-      title: "Explore",
-      iconActive: <Heart primaryColor="#ffffff" />,
+      title: "Favorites",
+      iconActive: <Heart set="bold" primaryColor="#ffffff" />,
       iconInactive: <Heart primaryColor="#A5A7AC" />,
-      path: "/explore",
+      path: "/favorites",
     },
   ];
   return (
@@ -36,7 +44,8 @@ function BottomTab() {
       <div className="flex items-center justify-between my-3">
         {navItems.map((item, idx) => (
           <button
-            className={`flex items-center px-6 py-3.5 rounded-2xl ${
+            onClick={() => router.push(item.path)}
+            className={`flex items-center px-6 py-3 rounded-2xl ${
               pathname === item.path ? "space-x-2 " : ""
             }`}
             style={{
