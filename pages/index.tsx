@@ -6,6 +6,7 @@ import PopularCategories from "@/components/PopularCategories";
 import BottomTab from "@/components/BottomTab";
 import HomeLayout from "@/components/HomeLayout";
 import { TypeOfTour } from "./explore";
+import TopDestinationsMobile from "@/components/TopDestinationsMobile";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <PopularPlaces />
         <PopularCategories />
         <TypeOfTour/>
+        <TopDestinationsMobile/>
       </HomeLayout>
     </>
   );
