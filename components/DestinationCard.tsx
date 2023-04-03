@@ -5,22 +5,21 @@ import React from "react";
 function DestinationCard({ data }: { data: any }) {
   return (
     <Link href="/detail">
-      <div className="destinationCard">
+      <div className=" relative rounded-3xl mr-1">
+        {/* <div className=" absolute h-full w-full opacity-40 rounded-3xl bg-[#FF8080]" /> */}
         <img
-          style={{
-            height: "120px",
-            width: "100%",
-            borderTopLeftRadius: "20px",
-            borderTopRightRadius: "20px",
-          }}
           src={data.image}
+          alt="Your image"
+          className="w-full h-auto rounded-3xl   object-contain"
         />
-        <div style={{ padding: "10px" }}>
-          <p style={{ marginTop: "10px", fontWeight: "bold" }}>{data?.city}</p>
-          <p style={{ marginTop: "10px" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's
-          </p>
+        <div className="absolute bottom-0 w-full h-fit  flex items-center justify-between ">
+          <div className="px-2 py-4">
+            <p className="text-sm text-white font-bold">{data.city}</p>
+            <p className="text-sm text-white">Starting at {data.price}</p>
+          </div>
+          <div className="mr-2">
+            <img src="/svgs/love.svg" />
+          </div>
         </div>
       </div>
     </Link>

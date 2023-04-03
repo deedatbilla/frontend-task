@@ -1,143 +1,176 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Axiforma Regular";
+  src: url("../assets/fonts/Axiforma-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Axiforma Light";
+  src: url("../assets/fonts/Axiforma-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Recoleta Bold";
+  src: url("../assets/fonts/RecoletaAlt-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 html,
 body {
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  color: #011b33;
   overflow-x: hidden;
 }
-body {
-  overflow-y: scroll;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.heroMobile {
-  display: flex;
-  flex-direction: column;
-  background-image: url(/hero2.png);
-  height: 400px;
+
+.responsive {
   width: 100%;
-  background-repeat: no-repeat;
-  position: relative;
+  height: auto;
 }
-.popular-places-container {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 50px;
+option {
+  color: #000000;
 }
-.trip-details{
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  border-radius: 20px ;
-  height: 100%;
-  margin-inline: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 23px;
-  margin-bottom: 123px;
+select {
+  color: #000000;
 }
-.popular-places-container-mobile {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  margin: 0 auto;
-  margin-top: 30px;
+h1,
+h2,
+h3,
+h4,
+p {
+  line-height: 1.6;
 }
-.popular-places {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Recoleta Bold";
 }
-.popular-places-mobile {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 14px;
+/* p.bold {
+  font-weight: 700;
+} */
+
+:root {
+  font-size: 14px;
+  --color-button-text: #fff;
+  --color-primary-100: #f7fafc;
+  --color-primary-200: #f4f4f4;
+  --color-primary-300: #e2e8f0;
+  --color-primary-400: #cbd5e0;
+  --color-primary-500: #a0aec0;
+  --color-primary-600: #718096;
+  --color-primary-700: #787878;
+  --color-primary-800: #262932;
+  --color-primary-900: #1d1e26;
+
+  --color-secondary-100: #ebf8ff;
+  --color-secondary-200: #bee3f8;
+  --color-secondary-300: #90cdf4;
+  --color-secondary-400: #63b3ed;
+  --color-secondary-500: #eaedfe;
+  --color-secondary-600: #dff8ff;
+  --color-secondary-700: #00c3ff;
+  --color-secondary-800: #047ffe;
+  --color-secondary-900: #041132;
+
+  --color-text: #595759;
+
+  --color-accent: #ffc043;
+  --color-green: #50cd84;
+  --color-green-light: rgba(237, 250, 243, 0.9);
+  --color-red: #e11900;
+  --color-red-light: #fdeeee;
+  --color-purple: #ff3dec;
+  --color-dark: #212529;
+  --color-accent-hover: #ed8936;
+  --color-accent-disabled: #f8e2d3;
+  --screen-height-reduction: 0px;
+  --color-primary-100-translucent: rgba(222, 227, 234, 0.15);
 }
-.places {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  /* padding-inline: 5px; */
-  margin-top: 10px;
-}
-.top-destinations-mobile {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  background-color: white;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  padding: 20px;
-  margin-top: 240px;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-h1 {
-  font-weight: bold;
-  font-size: 48px;
-}
-.bottom-tab-container {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 12px;
-  background-color: white;
-}
-.bottom-tab-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
+/* h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 2.8rem;
+  } */
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
   outline: none;
 }
-.destinationCard {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-radius: 20px;
-  padding-bottom: 10px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-.destinationCard:hover {
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+h3 {
+  font-size: 2rem;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+input:re h4 {
+  font-size: 1.4rem;
 }
 
-@media (min-width: 1120px) {
-  .desktop {
-    display: block;
-  }
-  .mobile {
-    display: none;
-  }
+p {
+  font-size: 16px;
+  color: #656365;
+  font-family: "Axiforma Regular";
+  font-weight: 400;
+  /* line-height: 32px; */
+}
+.text-white {
+  color: #ffffff;
 }
 
-@media (max-width: 700px) {
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: block;
-    margin-bottom: 160px;
-  }
+.text-dark {
+  color: #000000;
 }
+
+p.small {
+  font-size: 0.85rem;
+}
+
+/* for firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary-800) rgba(0, 0, 0, 0);
+}
+
+/* for non-firefox */
+::-webkit-scrollbar {
+  overflow: overlay;
+  width: 5px;
+  /* shouldnt hardcode width, pls find way to make it dynamic, thin wasn't working for me...*/
+}
+
+::-webkit-scrollbar-track {
+  display: initial;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary-800);
+  border-radius: 5px;
+}
+
+hr {
+  color: var(--color-primary-300);
+}
+button:focus {
+  outline: none;
+}
+

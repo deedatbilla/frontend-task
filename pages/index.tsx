@@ -1,14 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
-import TopDestinations from "@/components/TopDestinations";
 import PopularPlaces from "@/components/PopularPlaces";
-import MobileHero from "@/components/MobileHero";
+import PopularCategories from "@/components/PopularCategories";
 import BottomTab from "@/components/BottomTab";
-import PopularProviders from "@/components/PopularProviders";
 
 export default function Home() {
   return (
@@ -19,18 +14,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="desktop">
-        <NavBar />
-        <main className={styles.main}>
-          <Hero />
-          <PopularPlaces />
-        </main>
-      </div>
 
-      <div className="mobile">
-        <MobileHero />
-       
-        <BottomTab/>
+      <div className="mx-auto max-w-md px-5">
+        <NavBar />
+        <Hero />
+        <PopularPlaces />
+        <PopularCategories />
+        <BottomTab />
       </div>
     </>
   );

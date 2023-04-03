@@ -2,7 +2,7 @@ import React from "react";
 import CircleStoryCard from "./CircleStoryCard";
 import DestinationCard from "./DestinationCard";
 import { places } from "./PopularPlaces";
-import PopularProviders from "./PopularProviders";
+import PopularCategories from "./PopularCategories";
 import { data } from "./TopDestinations";
 import Slider from "react-slick";
 function TopDestinationsMobile() {
@@ -45,7 +45,7 @@ function TopDestinationsMobile() {
             <img style={{ width: "100%" }} src="/how-it-works.png" />
           </div>
         </div>
-        <PopularProviders />
+        <PopularCategories />
 
         <div>
           <h1

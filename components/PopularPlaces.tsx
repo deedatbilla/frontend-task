@@ -1,90 +1,48 @@
 import React from "react";
+import Slider from "react-slick";
 import CircleStoryCard from "./CircleStoryCard";
 import DestinationCard from "./DestinationCard";
 import { data } from "./TopDestinations";
-export  const places = [
-    {
-      image: "/blog-img3.png",
-      city: "London",
-    },
-    {
-      image: "/blog-img1.png",
-      city: "New York",
-    },
-    {
-      image: "/place4.jpg",
-      city: "Delhi",
-    },
-    {
-      image: "/place5.jpg",
-      city: "Budapest",
-    },
-    {
-      image: "/place6.jpg",
-      city: "Tokyo",
-    },
-    {
-      image: "/place7.jpg",
-      city: "New York",
-    },
-    {
-      image: "/place8.webp",
-      city: "Delhi",
-    },
-    {
-      image: "/place3.png",
-      city: "Califonia",
-    },
-    {
-      image: "/place4.jpg",
-      city: "Mexico",
-    },
-    {
-      image: "/place5.jpg",
-      city: "New York",
-    },
-    {
-      image: "/place2.png",
-      city: "Delhi",
-    },
-    {
-      image: "/place3.png",
-      city: "Berlin",
-    },
-    {
-      image: "/place2.png",
-      city: "Dubai",
-    },
-  ];
+export const places = [
+  {
+    image: "/svgs/l1.svg",
+    city: "Tajmahal, India",
+    price: "$2000",
+  },
+  {
+    image: "/svgs/l2.svg",
+    city: "Tajmahal, India",
+    price: "$2000",
+  },
+  // {
+  //   image: "/svgs/l3.svg",
+  //   city: "Tajmahal, India",
+  //   price: "$2000",
+  // },
+];
+const filters = ["All", "America", "Europe", "Asia", "Ocenia"];
 function PopularPlaces() {
- 
+  var settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
   return (
-    <div>
-      <h1 style={{ textAlign: "center", marginTop: "100px" }}>
-        Popular places
-      </h1>
-      <p style={{ textAlign: "center", marginTop: "10px" }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacus
-        et eros malesuada auctor dignissim in metus. Suspendisse potenti. Fusce
-        eget commodo diam.
-      </p>
-      <div className="places">
-        {places.map((item) => (
-          <CircleStoryCard data={item} />
+    <div className="mt-12">
+      <div className="flex items-center- justify-between space-x-3">
+        {filters.map((item, idx) => (
+          <p className={`${idx === 0 ? "text-[#FF455B]" : ""}`}>{item}</p>
         ))}
       </div>
-      <div className="popular-places-container">
-        <div>
-          <div className={"popular-places"}>
-            {data.slice(0, 4).map((item, key) => (
-              <DestinationCard key={key} data={item} />
-            ))}
-          </div>
-        </div>
 
-        <div>
-          <img style={{ width: "100%" }} src="/how-it-works.png" />
-        </div>
+      <div className="mt-8">
+        <Slider {...settings} className="">
+          {places.map((item) => (
+            <DestinationCard data={item} />
+          ))}
+        </Slider>
       </div>
     </div>
   );

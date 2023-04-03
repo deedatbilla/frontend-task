@@ -1,40 +1,62 @@
+import { useRouter } from "next/router";
 import React from "react";
-import { Calendar, Home, Search, User } from "react-iconly";
+import { Calendar, Discovery, Heart, Home, Notification, Search, User } from "react-iconly";
 
 function BottomTab() {
+  const router = useRouter();
+  const { pathname } = router;
   const navItems = [
     {
       title: "Home",
-      icon: <Home primaryColor="#e11900" />,
+      iconActive: <Home primaryColor="#ffffff" />,
+      iconInactive: <Home primaryColor="#A5A7AC" />,
+      path: "/",
     },
     {
-      title: "Search",
-      icon: <Search />,
+      title: "Explore",
+      iconActive: <Discovery primaryColor="#ffffff" />,
+      iconInactive: <Discovery primaryColor="#A5A7AC" />,
+      path: "/explore",
     },
     {
-      title: "My Bookings",
-      icon: <Calendar />,
+      title: "Notifications",
+      iconActive: <Notification primaryColor="#ffffff" />,
+      iconInactive: <Notification primaryColor="#A5A7AC" />,
+      path: "/notification",
     },
     {
-      title: "Profile",
-      icon: <User />,
+      title: "Explore",
+      iconActive: <Heart primaryColor="#ffffff" />,
+      iconInactive: <Heart primaryColor="#A5A7AC" />,
+      path: "/explore",
     },
   ];
   return (
-    <div className="bottom-tab-container">
-      <div className="bottom-tab-items">
+    <div className="fixed bottom-0 bg-white w-full px-4">
+      <div className="flex items-center justify-between my-3">
         {navItems.map((item, idx) => (
           <button
-            key={idx}
+            className={`flex items-center px-6 py-4 rounded-2xl ${
+              pathname === item.path ? "space-x-2 " : ""
+            }`}
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
+              background:
+                item.path === pathname
+                  ? "radial-gradient(113.04% 183.82% at 50% -83.82%, #FF7888 0%, #FF455B 100%)"
+                  : "",
             }}
+            key={idx}
           >
-            {item.icon}
-            <p style={{ color: idx === 0 ? "#e11900" : "black" }}>{item.title}</p>
+            {item.path === pathname ? item.iconActive : item.iconInactive}
+            {item.path === pathname && (
+              <p
+                className={`${
+                  item.path === pathname ? "text-white" : "text-[#A5A7AC]"
+                }`}
+              >
+                {item.title}
+              </p>
+            )}
           </button>
         ))}
       </div>
