@@ -107,7 +107,7 @@ function Detail() {
             </div>
           </div>
 
-          <div className="mt-12 flex items-center justify-between space-x-3">
+          <div className="my-12 flex items-center justify-between space-x-3">
             <button className="w-full py-4 rounded-full border border-[#FF455B] ">
               <p className="font-bold">$1200</p>
             </button>
