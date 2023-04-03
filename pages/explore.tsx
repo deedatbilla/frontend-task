@@ -1,5 +1,6 @@
 import BottomTab from "@/components/BottomTab";
 import HomeLayout from "@/components/HomeLayout";
+import Link from "next/link";
 import React from "react";
 
 export const TypeOfTour = () => {
@@ -27,10 +28,11 @@ export const TypeOfTour = () => {
 
       <div className="flex justify-between items-center gap-4 mt-3">
         {categories.map((item) => (
-          <div className="flex flex-col  items-center justify-center ">
+          <Link href={"/explore"}><div className="flex flex-col  items-center justify-center ">
             <img src={item.image} className="h-[52px] w-[52px]" />
             <p className="text-[14px] text-[#A5A7AC] mt-4">{item.title}</p>
           </div>
+          </Link>
         ))}
       </div>
     </div>
