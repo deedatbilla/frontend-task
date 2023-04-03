@@ -40,8 +40,8 @@ function BottomTab() {
     },
   ];
   return (
-    <div className="fixed bottom-0 bg-white w-full">
-      <div className="flex items-center  my-3">
+    <div className="fixed bottom-0 bg-white w-full px-1">
+      <div className="flex items-center justify-between  my-3">
         {navItems.map((item, idx) => (
           <button
             onClick={() => router.push(item.path)}
