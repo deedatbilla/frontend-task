@@ -65,7 +65,7 @@ function Explore() {
   return (
     <HomeLayout>
       <div className=" flex justify-between items-center space-x-3 py-4 ">
-        <div className="w-full flex items-center bg-[#F4F4F5] py-3 px-5 rounded-full">
+        <div className="w-fit flex items-center bg-[#F4F4F5] py-3 px-5 rounded-full">
           <input
             placeholder="Search your trip"
             className="bg-[#F4F4F5] w-full"
@@ -74,7 +74,7 @@ function Explore() {
             <img src="/svgs/search.svg" />
           </button>
         </div>
-        <div className="w-full">
+        <div className="w-fit">
           <img src="p3.jpg" className=" h-12 w-12 rounded-2xl" />
         </div>
       </div>

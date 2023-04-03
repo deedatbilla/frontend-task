@@ -7,7 +7,7 @@ function NavBar() {
         <img src="/svgs/menu.svg" className=" shadow-2xl" />
       </button>
       <button>
-        <img src="p2.jpg" className=" h-12 w-12 rounded-2xl" />
+        <img src="p3.jpg" className=" h-12 w-12 rounded-2xl" />
       </button>
     </div>
   );
