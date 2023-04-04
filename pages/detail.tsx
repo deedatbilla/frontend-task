@@ -34,7 +34,7 @@ function Detail() {
       <div className=" relative  z-30">
         <Slider {...settings}>
           <div>
-            <img className="h-full object-cover" src="/paris.png" />
+            <img className="h-full object-cover bg-cover w-full" src="/paris.png" />
           </div>
         </Slider>
 
