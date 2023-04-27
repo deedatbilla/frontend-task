@@ -149,7 +149,7 @@ export default function Home() {
           <p className={classes.headerTextLight}>Discover London</p>
           <div className={classes.searchContainer}>
             <input
-              placeholder="Search experiences"
+              placeholder="Search experiences..."
               className={classes.searchInput}
               type="text"
             />
@@ -188,17 +188,15 @@ export default function Home() {
           </div>
           <div>
             <p className={classes.headerTextDark}>Best Hotels</p>
-            <div style={{ marginBottom: "10px" }}>
+            <div style={{ marginBottom: "20px" }}>
               <Slider {...settings}>
                 {filters.map((item) => (
                   <Button
                     mr={10}
-                   
                     size="sm"
                     color="red"
                     variant="light"
                     radius={"lg"}
-                   
                   >
                     {item}
                   </Button>
@@ -212,7 +210,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
