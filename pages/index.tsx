@@ -7,6 +7,7 @@ import {
   createStyles,
   getStylesRef,
   rem,
+  Group,
 } from "@mantine/core";
 import { Category, Search } from "react-iconly";
 import HotelCard from "@/components/HotelCard";
@@ -102,19 +103,19 @@ const data = [
 ];
 const categories = [
   {
-    icon: "",
+    icon: "/svgs/cat2.svg",
     name: "Museums",
   },
   {
-    icon: "",
+    icon: "/svgs/cat1.svg",
     name: "Wine",
   },
   {
-    icon: "",
+    icon: "/svgs/cat4.svg",
     name: "Foods",
   },
   {
-    icon: "",
+    icon: "/svgs/cat3.svg",
     name: "Transport",
   },
 ];
@@ -152,10 +153,26 @@ export default function Home() {
         </div>
 
         <div className={classes.content}>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <Category />
-            <p className={classes.headerTextDark}>Popular Categories</p>
-            <div></div>
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <Category />
+              <p className={classes.headerTextDark}>Popular Categories</p>
+            </div>
+            <Group grow>
+              {categories.map((item) => (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <img src={item.icon} alt="" />
+                  <p>{item.name}</p>
+                </div>
+              ))}
+            </Group>
           </div>
           <div>
             <p className={classes.headerTextDark}>Best Hotels</p>
