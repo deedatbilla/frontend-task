@@ -18,15 +18,9 @@ const useStyles = createStyles((theme) => ({
     // padding: "10px",
     marginLeft: "auto",
     marginRight: "auto",
-    borderRadius: theme.radius.sm,
+  
 
-    // Dynamic media queries, define breakpoints in theme, use anywhere
-    [theme.fn.smallerThan("sm")]: {
-      // Child reference in nested selectors via ref
-      [`& .${getStylesRef("child")}`]: {
-        fontSize: theme.fontSizes.xs,
-      },
-    },
+    
   },
   headerTextLight: {
     color: "white",
@@ -38,17 +32,18 @@ const useStyles = createStyles((theme) => ({
     fontWeight: "bold",
     fontSize: "24px",
   },
-  hero: {
-    height: "40vh",
-    backgroundImage: "url('/l7.svg')",
-    position: "relative",
-    backgroundSize: "cover",
+  header: {
+    padding: "10px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+   
   },
   searchWrapper: {
-    position: "absolute",
     width: "100%",
-    bottom: -20,
     padding: "0 10px",
+    
+    marginTop:"-20px"
   },
   searchContainer: {
     display: "flex",
@@ -130,25 +125,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={classes.root}>
-        <div className={classes.hero}>
-          {/* <img width={100} src="/clogo.png" alt="" /> */}
-          <div className={classes.searchWrapper}>
-            <p className={classes.headerTextLight}>Discover London</p>
-            <div className={classes.searchContainer}>
-              <input
-                placeholder="Search for hotels"
-                className={classes.searchInput}
-                type="text"
-              />
-              <ActionIcon
-                size={"lg"}
-                variant="filled"
-                color="green"
-                radius={"lg"}
-              >
-                <Search primaryColor="white" />
-              </ActionIcon>
-            </div>
+        <div className={classes.header}>
+          <img width={150} src="/clogo.png" alt="" />
+          <img
+            style={{ borderRadius: "50%", width: "50px" }}
+            width={100}
+            src="/p3.jpg"
+            alt=""
+          />
+        </div>
+        {/* <div><img src="/l7.svg"/></div> */}
+        <div className={classes.searchWrapper}>
+          <p className={classes.headerTextLight}>Discover London</p>
+          <div className={classes.searchContainer}>
+            <input
+              placeholder="Search experiences"
+              className={classes.searchInput}
+              type="text"
+            />
+            <ActionIcon
+              size={"lg"}
+              variant="filled"
+              color="green"
+              radius={"lg"}
+            >
+              <Search primaryColor="white" />
+            </ActionIcon>
           </div>
         </div>
 
