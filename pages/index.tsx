@@ -1,16 +1,104 @@
+import Header from "@/components/Header";
+import  '../styles/globals.css'
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import NavBar from "@/components/NavBar";
-import Hero from "@/components/Hero";
-import TopDestinations from "@/components/TopDestinations";
-import PopularPlaces from "@/components/PopularPlaces";
-import MobileHero from "@/components/MobileHero";
-import BottomTab from "@/components/BottomTab";
-import PopularProviders from "@/components/PopularProviders";
+import { Button, createStyles, getStylesRef, rem } from "@mantine/core";
+import { Search } from "react-iconly";
+import HotelCard from "@/components/HotelCard";
+const useStyles = createStyles((theme) => ({
+  root: {
+    maxWidth: rem(400),
+    width: "100%",
+    // padding: "10px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderRadius: theme.radius.sm,
 
+    // Dynamic media queries, define breakpoints in theme, use anywhere
+    [theme.fn.smallerThan("sm")]: {
+      // Child reference in nested selectors via ref
+      [`& .${getStylesRef("child")}`]: {
+        fontSize: theme.fontSizes.xs,
+      },
+    },
+  },
+  headerTextLight: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: "24px",
+  },
+  headerTextDark: {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: "24px",
+  },
+  hero: {
+    height: "40vh",
+    backgroundImage: "url('/l7.svg')",
+    position: "relative",
+    backgroundSize: "cover",
+  
+  },
+  searchWrapper: {
+    position: "absolute",
+    width: "100%",
+    bottom: -20,
+    padding: "0 10px",
+    
+  },
+  searchContainer: {
+    display: "flex",
+    alignItems: "center",
+    width: "100%",
+    padding: "4px 12px",
+    borderRadius: "1000px",
+    backgroundColor: "#F4F4F5",
+    border: `1px solid ${theme.colors.gray[2]}`,
+  },
+  searchInput: {
+    width: "100%",
+    backgroundColor: theme.colors.gray[1],
+    border: "none",
+  },
+  searchButton: {
+    color: theme.white,
+    backgroundColor: "#2f9e44",
+    border: 0,
+    borderRadius: "100%",
+    // height:"50px",
+    // width:"50px",
+    padding: `${theme.spacing.sm} ${theme.spacing.sm}`,
+    cursor: "pointer",
+  },
+  content: {
+    padding: "0 10px",
+    height: "100%",
+    backgroundColor: "white",
+    marginTop: "20px",
+  },
+}));
+const data = [
+  {
+    title: "2 Hours Forest Therapy Session in Canada",
+    price: "€75.24",
+    image:
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fH",
+  },
+  
+  {
+    title:
+      "Private:Brewery, Winery, and Cider & Spirit Tastings Tour in SW Ontario",
+    price: "€25.00",
+    image: "/92.jpg",
+  },
+  {
+    title: "European Evening Walking Food Tour in London, Ontario",
+    price: "€105.00",
+    image: "/93.jpg",
+  },
+];
 export default function Home() {
+  const { classes } = useStyles();
   return (
     <>
       <Head>
@@ -19,18 +107,33 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="desktop">
-        <NavBar />
-        <main className={styles.main}>
-          <Hero />
-          <PopularPlaces />
-        </main>
-      </div>
+      <div className={classes.root}>
+        <div className={classes.hero}>
+          <div className={classes.searchWrapper}>
+            <p className={classes.headerTextLight}>Discover London</p>
+            <div className={classes.searchContainer}>
+              <input
+                placeholder="Search for hotels"
+                className={classes.searchInput}
+                type="text"
+              />
+              <Button color="green" radius={"lg"}>
+                <Search primaryColor="white" />
+              </Button>
+            </div>
+          </div>
+        </div>
 
-      <div className="mobile">
-        <MobileHero />
-       
-        <BottomTab/>
+        <div className={classes.content}>
+          <div>
+            <p className={classes.headerTextDark}>Best Hotels</p>
+            <div>
+              {data.map((item) => (
+                <HotelCard data={item} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
