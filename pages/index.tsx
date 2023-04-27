@@ -14,6 +14,7 @@ import {
 import { Category, Search } from "react-iconly";
 import HotelCard from "@/components/HotelCard";
 import Slider from "react-slick";
+import Footer from "@/components/Footer";
 const useStyles = createStyles((theme) => ({
   root: {
     maxWidth: rem(400),
@@ -21,6 +22,7 @@ const useStyles = createStyles((theme) => ({
     // padding: "10px",
     marginLeft: "auto",
     marginRight: "auto",
+    backgroundColor: "white",
   },
   headerTextLight: {
     color: "white",
@@ -214,6 +216,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );
