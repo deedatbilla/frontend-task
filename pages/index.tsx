@@ -1,8 +1,14 @@
 import Header from "@/components/Header";
 import Head from "next/head";
 import Image from "next/image";
-import { ActionIcon, Button, createStyles, getStylesRef, rem } from "@mantine/core";
-import { Search } from "react-iconly";
+import {
+  ActionIcon,
+  Button,
+  createStyles,
+  getStylesRef,
+  rem,
+} from "@mantine/core";
+import { Category, Search } from "react-iconly";
 import HotelCard from "@/components/HotelCard";
 const useStyles = createStyles((theme) => ({
   root: {
@@ -36,20 +42,18 @@ const useStyles = createStyles((theme) => ({
     backgroundImage: "url('/l7.svg')",
     position: "relative",
     backgroundSize: "cover",
-  
   },
   searchWrapper: {
     position: "absolute",
     width: "100%",
     bottom: -20,
     padding: "0 10px",
-    
   },
   searchContainer: {
     display: "flex",
     alignItems: "center",
     width: "100%",
-    padding: "4px 12px",
+    padding: "8px 12px",
     borderRadius: "1000px",
     backgroundColor: "#F4F4F5",
     border: `1px solid ${theme.colors.gray[2]}`,
@@ -83,7 +87,7 @@ const data = [
     image:
       "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fH",
   },
-  
+
   {
     title:
       "Private:Brewery, Winery, and Cider & Spirit Tastings Tour in SW Ontario",
@@ -94,6 +98,24 @@ const data = [
     title: "European Evening Walking Food Tour in London, Ontario",
     price: "€105.00",
     image: "/93.jpg",
+  },
+];
+const categories = [
+  {
+    icon: "",
+    name: "Museums",
+  },
+  {
+    icon: "",
+    name: "Wine",
+  },
+  {
+    icon: "",
+    name: "Foods",
+  },
+  {
+    icon: "",
+    name: "Transport",
   },
 ];
 export default function Home() {
@@ -108,6 +130,7 @@ export default function Home() {
       </Head>
       <div className={classes.root}>
         <div className={classes.hero}>
+          {/* <img width={100} src="/clogo.png" alt="" /> */}
           <div className={classes.searchWrapper}>
             <p className={classes.headerTextLight}>Discover London</p>
             <div className={classes.searchContainer}>
@@ -116,7 +139,12 @@ export default function Home() {
                 className={classes.searchInput}
                 type="text"
               />
-              <ActionIcon size={"lg"} variant="filled" color="green" radius={"lg"}>
+              <ActionIcon
+                size={"lg"}
+                variant="filled"
+                color="green"
+                radius={"lg"}
+              >
                 <Search primaryColor="white" />
               </ActionIcon>
             </div>
@@ -124,6 +152,11 @@ export default function Home() {
         </div>
 
         <div className={classes.content}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <Category />
+            <p className={classes.headerTextDark}>Popular Categories</p>
+            <div></div>
+          </div>
           <div>
             <p className={classes.headerTextDark}>Best Hotels</p>
             <div>
