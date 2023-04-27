@@ -51,24 +51,26 @@ function HotelCard({data}: {data: any }) {
           <Group spacing={"xs"}>
             <Badge
               mt={3}
-              color="gray"
+              color="green"
               p={"md"}
+              size="lg"
               variant="light"
-              pl={3}
-              pr={3}
-              leftSection={checkIcon}
+             px={12}
+            
+            //   leftSection={checkIcon}
             >
               FREE CANCELLATION
             </Badge>
             <Badge
               mt={3}
-              color="gray"
+              color="green"
               p={"md"}
+              size="lg"
               variant="light"
-              pl={3}
-              pr={3}
+              px={12}
+             
               
-              leftSection={clockIcon}
+            //   leftSection={clockIcon}
             >
               2 HRS
             </Badge>
