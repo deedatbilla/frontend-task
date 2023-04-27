@@ -192,14 +192,9 @@ export default function Home() {
               <Slider {...settings}>
                 {filters.map((item) => (
                   <Button
-                    m={4}
-                    style={{
-                      textAlign: "center",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                    size="lg"
+                    mr={10}
+                   
+                    size="sm"
                     color="red"
                     variant="light"
                     radius={"lg"}
