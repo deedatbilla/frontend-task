@@ -138,7 +138,7 @@ export default function Home() {
         <div className={classes.header}>
           <img width={150} src="/clogo.png" alt="" />
           <img
-            style={{ borderRadius: "50%", width: "50px" }}
+            style={{ borderRadius: "50%", width: "40px" }}
             width={100}
             src="/p3.jpg"
             alt=""
