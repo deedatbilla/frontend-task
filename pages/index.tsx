@@ -23,6 +23,7 @@ const useStyles = createStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
     backgroundColor: "white",
+    overflowX: "hidden",
   },
   headerTextLight: {
     color: "white",
