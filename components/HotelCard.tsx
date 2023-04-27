@@ -54,7 +54,7 @@ function HotelCard({data}: {data: any }) {
               color="gray"
               p={"md"}
               variant="light"
-              pl={0}
+              pl={3}
               pr={3}
               leftSection={checkIcon}
             >
@@ -65,8 +65,9 @@ function HotelCard({data}: {data: any }) {
               color="gray"
               p={"md"}
               variant="light"
-              pl={0}
+              pl={3}
               pr={3}
+              
               leftSection={clockIcon}
             >
               2 HRS
