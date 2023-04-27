@@ -1,8 +1,7 @@
 import Header from "@/components/Header";
-import  '../styles/globals.css'
 import Head from "next/head";
 import Image from "next/image";
-import { Button, createStyles, getStylesRef, rem } from "@mantine/core";
+import { ActionIcon, Button, createStyles, getStylesRef, rem } from "@mantine/core";
 import { Search } from "react-iconly";
 import HotelCard from "@/components/HotelCard";
 const useStyles = createStyles((theme) => ({
@@ -117,9 +116,9 @@ export default function Home() {
                 className={classes.searchInput}
                 type="text"
               />
-              <Button color="green" radius={"lg"}>
+              <ActionIcon size={"lg"} variant="filled" color="green" radius={"lg"}>
                 <Search primaryColor="white" />
-              </Button>
+              </ActionIcon>
             </div>
           </div>
         </div>
