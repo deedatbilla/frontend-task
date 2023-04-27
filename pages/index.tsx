@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Head from "next/head";
 import Image from "next/image";
+import { Carousel } from "@mantine/carousel";
 import {
   ActionIcon,
   Button,
@@ -8,9 +9,11 @@ import {
   getStylesRef,
   rem,
   Group,
+  Badge,
 } from "@mantine/core";
 import { Category, Search } from "react-iconly";
 import HotelCard from "@/components/HotelCard";
+import Slider from "react-slick";
 const useStyles = createStyles((theme) => ({
   root: {
     maxWidth: rem(400),
@@ -18,9 +21,6 @@ const useStyles = createStyles((theme) => ({
     // padding: "10px",
     marginLeft: "auto",
     marginRight: "auto",
-  
-
-    
   },
   headerTextLight: {
     color: "white",
@@ -37,13 +37,12 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-   
   },
   searchWrapper: {
     width: "100%",
     padding: "0 10px",
-    
-    marginTop:"-20px"
+
+    marginTop: "-20px",
   },
   searchContainer: {
     display: "flex",
@@ -114,7 +113,14 @@ const categories = [
     name: "Transport",
   },
 ];
-const filters=[]
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 2,
+};
+const filters = ["All", "Europe", "Asia", "Africa", "America", "Oceania"];
 export default function Home() {
   const { classes } = useStyles();
   return (
@@ -179,6 +185,28 @@ export default function Home() {
           </div>
           <div>
             <p className={classes.headerTextDark}>Best Hotels</p>
+            <div style={{ marginBottom: "10px" }}>
+              <Slider {...settings}>
+                {filters.map((item) => (
+                  <Button
+                    m={4}
+                    style={{
+                      textAlign: "center",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    size="lg"
+                    color="red"
+                    variant="light"
+                    radius={"lg"}
+                   
+                  >
+                    {item}
+                  </Button>
+                ))}
+              </Slider>
+            </div>
             <div>
               {data.map((item) => (
                 <HotelCard data={item} />
